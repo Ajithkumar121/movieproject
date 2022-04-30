@@ -1,0 +1,13 @@
+{% extends 'base.html' %}
+{% block body %}
+<img src="{{output.img.url}}" width="150" height="200"><br>
+{{output.name}}
+{{output.year}}<br>
+
+{{output.desc}}<br>
+
+<a class="btn btn-outline-success" href="{% url 'movieapp:update' output.id %}" >Update</a>
+<a class="btn btn-outline-danger" href="{% url 'movieapp:delete' output.id %}" >Delete</a>
+
+
+{% endblock %}
